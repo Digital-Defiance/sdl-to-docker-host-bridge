@@ -12,11 +12,20 @@
   
   <form hx-post="/ws" hx-swap="outerHTML" hx-target="#message-container">
     <input type="text" name="message" placeholder="Type a message" required>
-    <button type="submit">Send</button>
+    <button type="submit">Seknd</button>
   </form>
 
+
+  <div id="msg">
+    aaa
+  </div>
+
   <script>
-    const ws = new WebSocket("ws://localhost:8080/ws");
+    const ws = new WebSocket("ws://localhost:8888");
+
+
+    document.getElementById('msg').innerHTML = `asdfadsf`
+
 
     ws.addEventListener("message", event => {
       const messageList = document.getElementById("messages");
