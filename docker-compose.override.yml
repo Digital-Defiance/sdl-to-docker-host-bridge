@@ -1,0 +1,13 @@
+version: '3'
+services:
+
+
+  web:
+    build: ./www
+  sdl:
+    build: ./sdl-app
+
+
+networks:
+  webnet:
+    driver: bridge
